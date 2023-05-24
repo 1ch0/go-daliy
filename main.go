@@ -35,10 +35,10 @@ func main() {
 			defer f.Close()
 			if i == 3 {
 				// 如果是当天的文件夹，则在README.md中记录日期信息
-				f.WriteString("# " + now.Format("2006") + " 日志记录\n\n## Reference\n - []()\n\n## Summary\n\n\n## Plan\n\n\n## Review\n\n\n## Record\n\n")
+				f.WriteString("# " + now.Format("2006") + " 日志记录\n\n## Reference\n - []()\n\n## Summary\n")
 			} else {
 				// 如果不是当天的文件夹，则在README.md中记录路径信息
-				f.WriteString("# " + now.Format("2006-01") + " 日志记录\n\n## Reference\n - []()\n\n## Summary\n\n\n## Plan\n\n\n## Review\n\n\n## Record\n\n")
+				f.WriteString("# " + now.Format("2006-01") + " 日志记录\n\n## Reference\n - []()\n\n## Summary\n")
 			}
 		}
 
@@ -58,7 +58,7 @@ func main() {
 					panic(err)
 				}
 				defer f.Close()
-				f.WriteString("# " + now.Format("2006-01-02") + " 日志记录\n\n## Reference\n - []()\n\n## Summary\n\n\n## Plan\n\n\n## Review\n\n## Record\n\n")
+				f.WriteString("# " + now.Format("2006-01-02") + " 日志记录\n\n## Reference\n - []()\n\n## Summary\n")
 			}
 
 			// 在当天的文件夹中创建main.go文件
